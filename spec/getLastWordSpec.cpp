@@ -16,10 +16,12 @@ namespace spec
 			char ans[][100] = { "word", "he","","ab","x","asd324","","a"};
 			int sc = 8;
 			int si = 0;
-			for (si = 0; si < sc; si++){
+			for (si = 0; si < sc; si++)
+			{
 				char *new_str = get_last_word(sentences[si]);
 				int k = 0;
-				for (k = 0; new_str[k] != '\0'; k++){
+				for (k = 0; new_str[k] != '\0'; k++)
+				{
 					Assert::AreEqual(new_str[k], ans[si][k], L"Error in NormalString", LINE_INFO());
 				}
 			}
